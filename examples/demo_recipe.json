@@ -1,0 +1,35 @@
+{
+  "version": "0.1",
+  "name": "demo_pipeline",
+  "workspace_dir": "./runs/demo",
+  "input_manifest": "./examples/data/input.jsonl",
+  "output_manifest": "./examples/data/output.jsonl",
+  "steps": [
+    {
+      "id": "add_metadata",
+      "type": "AddConstantFields",
+      "params": {
+        "fields": {
+          "source": "demo",
+          "processed": true
+        }
+      }
+    },
+    {
+      "id": "clean_fields",
+      "type": "DropSpecifiedFields",
+      "params": {
+        "fields_to_drop": ["debug"]
+      }
+    },
+    {
+      "id": "normalize",
+      "type": "RenameFields",
+      "params": {
+        "rename_fields": {
+          "text": "content"
+        }
+      }
+    }
+  ]
+}

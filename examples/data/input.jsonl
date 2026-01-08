@@ -1,0 +1,5 @@
+{"id": 1, "text": "Hello world", "lang": "en", "debug": true}
+{"id": 2, "text": "Bonjour le monde", "lang": "fr", "debug": false}
+{"id": 3, "text": "Hola mundo", "lang": "es", "debug": true}
+{"id": 4, "text": "Ciao mondo", "lang": "it", "debug": false}
+{"id": 5, "text": "Hallo Welt", "lang": "de", "debug": true}

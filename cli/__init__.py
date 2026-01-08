@@ -1,0 +1,1 @@
+"""MiniDP CLI package."""
