@@ -48,6 +48,24 @@ from .runner import PipelineRunner, RunContext, run_recipe
 # Recipe utilities
 from .recipe import load_recipe, save_recipe, validate_recipe
 
+# Recipe builder
+from .recipe_builder import (
+    create_recipe,
+    create_custom_processor,
+    get_processors,
+    get_custom_processors,
+    get_processor_names,
+    get_custom_processor_names,
+    add_custom_processor_to_registry,
+)
+
+# Custom processors registry
+from .custom_processors import (
+    CustomProcessorRegistry,
+    get_default_custom_registry,
+    register_custom_processor,
+)
+
 # Errors
 from .errors import (
     ConfigurationError,
@@ -81,6 +99,10 @@ __all__ = [
     "ProcessorRegistry",
     "get_default_registry",
     "register_processor",
+    # Custom processors registry
+    "CustomProcessorRegistry",
+    "get_default_custom_registry",
+    "register_custom_processor",
     # Runner
     "RunContext",
     "PipelineRunner",
@@ -89,6 +111,14 @@ __all__ = [
     "load_recipe",
     "save_recipe",
     "validate_recipe",
+    # Recipe builder
+    "create_recipe",
+    "create_custom_processor",
+    "get_processors",
+    "get_custom_processors",
+    "get_processor_names",
+    "get_custom_processor_names",
+    "add_custom_processor_to_registry",
     # Errors
     "MiniDPError",
     "RecipeValidationError",
